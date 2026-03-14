@@ -2,7 +2,9 @@
 
 namespace App\Domain\Core\Request;
 
-class DeleteRequest
-{
+use App\Domain\Core\Model\DomainModelInterface;
 
+abstract class DeleteRequest
+{
+    public abstract function getDomainModel(): DomainModelInterface;
 }

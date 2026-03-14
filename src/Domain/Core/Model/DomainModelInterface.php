@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Domain\Core;
+namespace App\Domain\Core\Model;
 
 interface DomainModelInterface
 {

@@ -4,7 +4,7 @@ namespace App\Tests\Domain\Service\AssetOptimizer;
 
 use App\Domain\Service\AssetOptimizer\Optimizers\CostOptimizer;
 
-class CostOptimizerTestCase
+class CostOptimizerTest
     extends OptimizerTestCase
 {
     protected function setUp(): void
@@ -21,7 +21,6 @@ class CostOptimizerTestCase
 
         $result = $this->optimizer->optimize(100, $assets);
 
-        // Doit choisir l'asset à 10 même s'il donne 500 de power
         $this->assertEquals(10.0, $result->getTotalCost());
         $this->assertEquals(500, $result->getTotalPower());
         $this->assertCount(1, $result->getAssets());
@@ -48,5 +47,17 @@ class CostOptimizerTestCase
 
         $this->assertEquals(0, $result->getTotalCost());
         $this->assertEmpty($result->getAssets());
+    }
+
+    public function testNotEnoughPowerInAssets(): void
+    {
+        $assets = [
+            $this->createAsset('Asset 1', 'Small A', 50.0, 30),
+            $this->createAsset('Asset 2', 'Small B', 20.0, 40),
+        ];
+
+        $result = $this->optimizer->optimize(100, $assets);
+
+        $this->assertCount(0, $result->getAssets());
     }
 }

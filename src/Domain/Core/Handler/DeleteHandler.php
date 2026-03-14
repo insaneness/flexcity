@@ -2,7 +2,7 @@
 
 namespace App\Domain\Core\Handler;
 
-class DeleteHandler
+abstract class DeleteHandler
 {
 
 }

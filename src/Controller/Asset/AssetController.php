@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controller\Activation;
+namespace App\Controller\Asset;
 
 use App\Controller\Core\JsonController;
 use App\Domain\Asset\Handler\CreateAssetHandler;

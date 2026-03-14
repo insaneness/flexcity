@@ -6,8 +6,8 @@ use App\Domain\Asset\Model\Asset;
 use App\Domain\Service\AssetOptimizer\AssetOptimizerInterface;
 use PHPUnit\Framework\TestCase;
 
-abstract class OptimizerTest
-        extends TestCase
+abstract class OptimizerTestCase
+    extends TestCase
 {
     protected AssetOptimizerInterface $optimizer;
 

@@ -2,7 +2,10 @@
 
 namespace App\Domain\Core\Request;
 
-class UpdateRequest
-{
+use App\Domain\Core\Model\DomainModelInterface;
 
+abstract class UpdateRequest
+    extends SaveRequest
+{
+    public abstract function getDomainModel(): DomainModelInterface;
 }
