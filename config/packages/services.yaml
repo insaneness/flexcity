@@ -1,0 +1,7 @@
+services:
+    App\Domain\Service\AssetOptimizer\AssetOptimizerInterface: '@App\Domain\Service\AssetOptimizer\Optimizers\CostOptimizer'
+
+    # On configure la pénalité pour l'optimizer pondéré
+    App\Domain\Service\AssetOptimizer\Optimizers\PonderedCostOptimizer:
+        arguments:
+            $overpowerPenalty: 0.5
