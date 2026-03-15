@@ -17,12 +17,12 @@ Assurez-vous que votre environnement de développement dispose des éléments su
 
 ## ⚙️ Installation et Configuration
 
-Suivez ces étapes pour cloner et lancer le projet localement :
+Suivez ces étapes pour cloner et lancer le projet localement.
+Placez-vous dans le dossier de votre choix et exécutez les commandes suivantes :
 
 ### 1. Cloner le dépôt
 ```bash
-cd votre-dossier-de-travail
-git clone https://github.com/insaneness/flexcity.git
+git clone https://github.com/insaneness/flexcity.git .
 ```
 ### 2. Installer les dépendances
 ```bash
