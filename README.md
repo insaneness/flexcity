@@ -50,13 +50,21 @@ symfony server:start
 
 ## 🚀 Utilisation
 ### Ajouter une activation (recevoir une requête TSO)
+Faire une requête POST sur `http://127.0.0.1:8000/activation` avec le payload suivant :
+```json
+{
+    "date": "17-03-2026",
+    "volume": 150
+}
+```
+Si vous avez Postman d'installé : 
 ```bash
-curl -X POST http://127.0.0.1:8000/activation \
--H "Content-Type: application/json" \
--d '{
-      "volume": 150, 
-      "date": "17-03-2026"
-    }'
+postman request POST 'http://127.0.0.1:8000/activation' \
+  --header 'Content-Type: application/json' \
+  --body '{
+    "date": "17-03-2026",
+    "volume": 150
+}'
 ```
 
 ## 🚥 Tests
